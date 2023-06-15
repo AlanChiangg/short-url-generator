@@ -2,9 +2,9 @@
 
 ## 專案畫面
 
-![image](https://github.com/AlanChiangg/short-url-generator\public\image\img1.jpg)
+![image](https://github.com/AlanChiangg/short-url-generator/public/image/img1.jpg)
 
-![image](https://github.com/short-url-generator\public\image\img2.jpg)
+![image](https://github.com/AlanChiangg/short-url-generator/public/image/img2.jpg)
 
 ## 介紹
 
