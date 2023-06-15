@@ -1,0 +1,17 @@
+<div class="my-3 text-center">
+  <h2>Success! Please use this link:</h2>
+  <a id="generatedURL" href="{{ shortUrl }}" id="newUrl">{{ shortUrl }}</a>
+  <div class="my-3">
+    <button class="btn btn-success" onclick="copy()">Copy Link</button>
+    <a href="/" class="btn btn-secondary">Back</a>
+  </div>
+</div>
+
+<script>
+  function copy() {
+    const copyURL = document.getElementById('generatedURL')
+    navigator.clipboard.writeText(copyURL.innerText)
+      .then(() => alert('Short URL copied to clipboard!'))
+      .catch(error => console.log(error))
+  }
+</script>
