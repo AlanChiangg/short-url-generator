@@ -32,11 +32,11 @@ router.post('/', (req, res) => {
 
 // 將短網址連至原網址
 router.get('/:radomCode', (req, res) => {
-  const fullUrl = req.body.fullUrl
   const radomCode = req.params.radomCode
   const shortUrl = 'http://localhost:3000/' + radomCode
   URL.findOne({ shortUrl })
     .then(url => {
+      if (!url) return res.redirect("/")
       res.redirect(url.fullUrl)
     })
     .catch(err => console.log(err))
