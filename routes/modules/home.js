@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const URL = require('../../modles/URL')
-const generateShortUrl = require('../../generateShortUrl')
+const generateShortUrl = require('../../public/javascripts/generateShortUrl')
 
 router.get('/', (req, res) => {
   res.render('index')
@@ -32,6 +32,7 @@ router.post('/', (req, res) => {
 
 // 將短網址連至原網址
 router.get('/:radomCode', (req, res) => {
+  const fullUrl = req.body.fullUrl
   const radomCode = req.params.radomCode
   const shortUrl = 'http://localhost:3000/' + radomCode
   URL.findOne({ shortUrl })

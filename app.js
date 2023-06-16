@@ -9,8 +9,10 @@ require('./config/mongoose')
 // handlebars and template engine setting
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', 'hbs')
-app.use(express.urlencoded({ extended: true }))
 
+// 利用 app.use 讓每筆請求都會經過以下模板進行前置處理,才會到路由
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
 app.use(routes)
 
 app.listen(port, () => {
