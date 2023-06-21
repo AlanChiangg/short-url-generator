@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const URL = require('../../modles/URL')
+const URL = require('../../models/URL')
 const generateShortUrl = require('../../public/javascripts/generateShortUrl')
 
 router.get('/', (req, res) => {
